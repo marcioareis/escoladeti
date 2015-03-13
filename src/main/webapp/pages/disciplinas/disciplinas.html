@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="../angular.min.js"></script>
+        <script src="veiculo.js"></script>
+    </head>
+    <body ng-controller="DisciplinaController">
+        <form>
+            <label>Id</label>
+            <input type="text" ng-model="disciplina.id" ng-disabled="!isNovo">
+            <br>
+            <label>Nome</label>
+            <input type="text" ng-model="disciplina.nome">
+            <br>
+            <label>Carga Horária</label>
+            <input type="text" ng-model="disciplina.cargaHoraria">
+            <br>
+            <label>Peso</label>
+            <input type="text" ng-model="disciplina.peso">
+            <br>
+            <input type="button" ng-click="salvar()" value="Salvar">
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Carga Horária</th>
+                    <th>Peso</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in disciplinas">
+                    <td>{{d.id}}</td>
+                    <td>{{d.nome}}</td>
+                    <td>{{d.carga.horaria}}</td>
+                    <td>{{d.peso}}</td>
+                    <td>
+                        <input type="button" ng-click="alterar(d)" value="Alterar">
+                        <input type="button" ng-click="excluir(d)" value="Excluir">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
