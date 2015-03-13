@@ -11,13 +11,13 @@ public class Disciplina {
     private Long id;
     private String nome;
     private Integer cargaHoraria;
-    private Integer peso;
+    private Double peso;
 
     public Disciplina() {
         
     }
 
-    public Disciplina(Long id, String nome, Integer cargaHoraria, Integer peso) {
+    public Disciplina(Long id, String nome, Integer cargaHoraria, Double peso) {
         this.id = id;
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
@@ -36,7 +36,7 @@ public class Disciplina {
         return cargaHoraria;
     }
 
-    public Integer getPeso() {
+    public Double getPeso() {
         return peso;
     }
 
@@ -48,7 +48,7 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public void setPeso(Integer peso) {
+    public void setPeso(Double peso) {
         this.peso = peso;
     }
 
